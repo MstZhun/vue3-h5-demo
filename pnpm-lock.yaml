@@ -8,6 +8,9 @@ dependencies:
   axios:
     specifier: ^1.6.5
     version: 1.6.5
+  eruda:
+    specifier: ^3.0.1
+    version: 3.0.1
   pinia:
     specifier: ^2.1.7
     version: 2.1.7(typescript@5.3.2)(vue@3.3.11)
@@ -61,9 +64,9 @@ devDependencies:
   npm-run-all2:
     specifier: ^6.1.1
     version: 6.1.1
-  postcss-px-to-viewport:
-    specifier: ^1.1.1
-    version: 1.1.1
+  postcss-px-to-viewport-8-plugin:
+    specifier: ^1.2.3
+    version: 1.2.3
   prettier:
     specifier: ^3.0.3
     version: 3.0.3
@@ -1516,6 +1519,10 @@ packages:
       is-arrayish: 0.2.1
     dev: true
 
+  /eruda@3.0.1:
+    resolution: {integrity: sha512-6q1Xdwga4JTr1mKSW4mzuWSSbmXgqpm/8Wa1QGFGfCWRjC0bCQjbS4u06M1te1moucIS3hBLlbSTPWYH2W0qbQ==}
+    dev: false
+
   /esbuild@0.19.11:
     resolution: {integrity: sha512-HJ96Hev2hX/6i5cDVwcqiJBBtuo9+FeIJOtZ9W1kA5M6AMJRHUZlpYZ1/SbEwtO0ioNAW8rUooVpC/WehY2SfA==}
     engines: {node: '>=12'}
@@ -2337,11 +2344,10 @@ packages:
       pathe: 1.1.2
     dev: true
 
-  /postcss-px-to-viewport@1.1.1:
-    resolution: {integrity: sha512-2x9oGnBms+e0cYtBJOZdlwrFg/mLR4P1g2IFu7jYKvnqnH/HLhoKyareW2Q/x4sg0BgklHlP1qeWo2oCyPm8FQ==}
+  /postcss-px-to-viewport-8-plugin@1.2.3:
+    resolution: {integrity: sha512-HRNm9ZE4/7PWw4a6C0GmDxdnSJaQKtKxIqufMpPYymhKJM/3WbZCIuktyE8N5TXinXVIMkOJ1N6erlpoxvNMYA==}
     dependencies:
       object-assign: 4.1.1
-      postcss: 8.4.33
     dev: true
 
   /postcss-selector-parser@6.0.15:

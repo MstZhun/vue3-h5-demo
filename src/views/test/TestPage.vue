@@ -26,7 +26,7 @@ const requestApi = async () => {
     //     size: 10,
     //     current: 1
     // })
-    console.log('99999----', res, res.hasMore, res.size)
+    // console.log('99999----', res, res.hasMore, res.size)
     const res = await testGetApi({
         type: '1__,__2',
         displayChannel: 1

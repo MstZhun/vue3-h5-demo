@@ -6,8 +6,7 @@ import vueJsx from '@vitejs/plugin-vue-jsx'
 import Components from 'unplugin-vue-components/vite'
 import { VantResolver } from '@vant/auto-import-resolver'
 import AutoImport from 'unplugin-auto-import/vite'
-// @ts-ignore
-import postcsspxtoviewport from 'postcss-px-to-viewport'
+import postcsspxtoviewport8plugin from 'postcss-px-to-viewport-8-plugin'
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }: ConfigEnv) => {
@@ -32,7 +31,7 @@ export default defineConfig(({ mode }: ConfigEnv) => {
         css: {
             postcss: {
                 plugins: [
-                    postcsspxtoviewport({
+                    postcsspxtoviewport8plugin({
                         viewportWidth: 375, // UI设计稿的宽度
                         selectorBlackList: ['ignore-'] // 指定不转换为视窗单位的类名
                     })
