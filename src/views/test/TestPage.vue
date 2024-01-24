@@ -3,12 +3,35 @@ import { useCounterStore } from '@/stores/counter'
 import TestComponent from '@/components/TestComponent.vue'
 
 import { showToast } from 'vant'
+import { testGetApi } from '@/api/home'
 const counter = useCounterStore()
 
 const toast = () => {
     showToast('提示内容')
     console.log('env: ', import.meta.env.VITE_HTTP_URL)
-    console.log('env: ', import.meta.env.VITE_RUNTIME_ENV)
+    console.log('env: ', import.meta.env.VITE_ENV)
+}
+
+const requestApi = async () => {
+    // const res = await testApi({
+    //     longitude: 116.44355,
+    //     latitude: 39.9219,
+    //     recommendType: 0,
+    //     positions: [],
+    //     cityCodes: [110100],
+    //     salaryRadiusCode: 0,
+    //     experienceRadiusCode: [],
+    //     jobType: [],
+    //     afterId: '',
+    //     size: 10,
+    //     current: 1
+    // })
+    console.log('99999----', res, res.hasMore, res.size)
+    const res = await testGetApi({
+        type: '1__,__2',
+        displayChannel: 1
+    })
+    console.log('88888----', res.flag)
 }
 </script>
 <template>
@@ -28,6 +51,7 @@ const toast = () => {
         <van-button type="primary" to="/activity">路由跳转</van-button>
         <van-button type="primary" @click="toast">测试vant函数调用</van-button>
         <TestComponent />
+        <van-button type="primary" @click="requestApi">api测试</van-button>
     </div>
 </template>
 <style lang="scss" scoped>
@@ -66,3 +90,4 @@ const toast = () => {
     }
 }
 </style>
+@/service/test @/api/test @/api/home
